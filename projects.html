@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Daniel Foust</title>
+  <meta name="description" content="Personal software projects by Daniel Foust." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-logo" href="index.html">Daniel Foust</a>
+      <nav class="site-nav">
+        <a href="index.html">About</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 1.5rem;">
+      <div class="wrap">
+        <h1 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Projects</h1>
+        <p class="lede">A running list of things I've built or am currently working on.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <p class="note">
+          This page shows placeholder project cards so you can see the layout. To add a real
+          project, copy one of the <code>&lt;article class="project-card"&gt;</code> blocks in
+          <code>projects.html</code>, fill in the title, description, tags, and links, then
+          delete the dashed "Add your next project" card (or duplicate it further down).
+        </p>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <h3>Project One</h3>
+            <p>
+              One or two sentences describing what this project does and why you built it.
+            </p>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">API</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Code</a>
+              <a href="#" target="_blank" rel="noopener">Live</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Project Two</h3>
+            <p>
+              One or two sentences describing what this project does and why you built it.
+            </p>
+            <div class="tag-list">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Data</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" rel="noopener">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card placeholder">
+            <p>Add your next project here.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; <span id="year"></span> Daniel Foust</span>
+      <span>Built by hand with HTML, CSS &amp; JS</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
