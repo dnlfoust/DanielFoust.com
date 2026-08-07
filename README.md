@@ -32,18 +32,37 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000 in a browser.
 
-## Deploying
+## Deploying (GitHub Pages)
 
-The site is static, so it can be hosted anywhere that serves plain files. A few common options:
+This repo is set up for GitHub Pages, serving from the `main` branch root. The
+`CNAME` file in the repo root points it at `danielfoust.com`.
 
-- **GitHub Pages** — free, deploys straight from this repo. Enable it in the repo's
-  Settings → Pages, set the source to this branch (or `main`) and root folder, then
-  add a `CNAME` file containing `danielfoust.com` to the repo root.
-- **Netlify** or **Vercel** — free tier, drag-and-drop or connect the repo, gives you
-  a URL plus easy custom-domain + HTTPS setup.
-- **Cloudflare Pages** — free, connects to the repo, includes DNS if you move
-  domain management to Cloudflare.
+One-time setup (GitHub UI, since this isn't scriptable via the API used here):
 
-Once you pick a host, point `danielfoust.com` at it by updating DNS records in
-GoDaddy's DNS management (no need to use GoDaddy's website builder — you're only
-using GoDaddy as the domain registrar/DNS host, which is fine).
+1. Go to the repo's **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to "Deploy from a branch".
+3. Set **Branch** to `main`, folder `/ (root)`, then **Save**.
+4. Under **Custom domain**, enter `danielfoust.com` and save (GitHub will verify
+   it against the `CNAME` file already in the repo).
+5. Once DNS (below) has propagated, check **Enforce HTTPS**.
+
+### DNS records (at GoDaddy)
+
+In GoDaddy's DNS management for `danielfoust.com`, add:
+
+| Type  | Name | Value                  |
+|-------|------|------------------------|
+| A     | @    | 185.199.108.153        |
+| A     | @    | 185.199.109.153        |
+| A     | @    | 185.199.110.153        |
+| A     | @    | 185.199.111.153        |
+| CNAME | www  | dnlfoust.github.io     |
+
+`danielfoust.com` is the primary domain; `www.danielfoust.com` will redirect to
+it automatically once both are configured. DNS propagation can take anywhere
+from a few minutes to a few hours.
+
+### Other hosting options
+
+The site is plain static files, so it can be hosted anywhere: Netlify, Vercel,
+and Cloudflare Pages all work too, if you'd rather use one of those instead.
