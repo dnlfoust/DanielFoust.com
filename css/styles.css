@@ -321,6 +321,24 @@ section h3 {
   color: var(--color-text);
 }
 
+.timeline-item ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.timeline-item li {
+  margin-bottom: 0.35rem;
+}
+
+.timeline-item li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item p {
+  margin: 0.5rem 0 0;
+  color: var(--color-text-muted);
+}
+
 .skills-list {
   display: flex;
   flex-wrap: wrap;
